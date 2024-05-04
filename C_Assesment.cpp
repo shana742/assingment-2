@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include<ctype.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 void reverseString(char *input);
 void concatenateStrings(char *str1, char *str2);
@@ -25,12 +26,10 @@ int main() {
         printf("7. Vowels and consonants count\n");
         printf("8. Exit\n");
 
-       
         int choice;
         printf("Enter your choice (1-8): ");
         scanf("%d", &choice);
 
-        
         switch (choice) {
             case 1:
                 reverseString(userInput);
@@ -71,12 +70,13 @@ int main() {
 
     return 0;
 }
+
 void reverseString(char *input) {
     printf("Enter a string: ");
     scanf("%s", input);
     strrev(input);
     
-    printf("Reversed string: %s\n");
+    printf("Reversed string: %s\n", input);
 }
 
 void concatenateStrings(char *str1, char *str2) {
@@ -153,4 +153,3 @@ void askToContinue() {
         exit(0);
     }
 }
-
